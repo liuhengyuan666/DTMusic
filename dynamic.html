@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>动态(电台)</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left" onclick='localStorage.removeItem(' first');"></a>
+			<h1 class="mui-title">动态(电台)</h1>
+		</header>
+
+		<div class="mui-table-view">
+			<ul class="mui-table-view-cell"></ul>
+		</div>
+		<div class="mui-table-view">
+			<ul class="mui-table-view-cell">
+				<a>
+					<img class="mui-media-object mui-pull-left" src="images/dianzan/1.JPG">
+					<div class="mui-media-body">
+						沧海遗尘
+						<p class="mui-ellipsis">音乐人</p>
+					</div>
+				</a>
+			</ul>
+			<video width="400" height="240" controls="controls">
+				<source src="video.ogg" type="video/ogg">
+				<source src="mp4/Mojito.mp4" type="video/mp4">
+			</video>
+
+			<div class="mui-table-view">
+				<ul class="mui-table-view-cell">
+					<li class="mui-table-view-cell" onclick="location.href='dianzan.html'">
+						<a class="mui-navigate-right">
+							等觉得很赞！
+							<img class="mui-media-object mui-pull-left" src="images/dianzan/1.JPG">
+							<img class="mui-media-object mui-pull-left" src="images/dianzan/2.JPG">
+							<img class="mui-media-object mui-pull-left" src="images/dianzan/3.JPG">
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</body>
+	<script src="js/mui.min.js"></script>
+	<script type="text/javascript">
+		mui.init()
+	</script>
+</html>

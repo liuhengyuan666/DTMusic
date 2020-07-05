@@ -1,0 +1,219 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.css" rel="stylesheet" />
+		<script src="js/mui.js"></script>
+		<script src="js/mui.min.js"></script>
+
+		<script type="text/javascript">
+			mui.init()
+			mui.init({
+				subpages: [{
+					url: 'home.html',
+					id: 'home.html',
+					styles: {
+						top: "0px",
+						bottom: "50px"
+					},
+					extras: {}
+				}],
+				preloadPages: [{
+					id: 'mine.html',
+					url: 'mine.html',
+					styles: {
+						top: "0px",
+						bottom: "50px"
+					},
+				}]
+			});
+
+			mui.plusReady(function() {
+				document.getElementById("home").addEventListener("tap", function() {
+					mui.openWindow({
+						url: 'home.html',
+						id: 'home.html',
+						styles: {
+							top: "0px",
+							bottom: "50px",
+						},
+						extras: {},
+						show: {
+							duration: 300,
+							aniShow: "slide-in-top"
+						}
+					})
+				})
+
+				document.getElementById("mine").addEventListener("tap", function() {
+					mui.openWindow({
+						url: 'mine.html',
+						id: 'mine.html',
+						styles: {
+							top: "0px",
+							bottom: "50px",
+						},
+						extras: {},
+						show: {
+							duration: 300,
+							aniShow: "slide-in-top"
+						}
+					})
+				})
+				
+				document.getElementById("ss").addEventListener("tap", function() {
+					mui.openWindow({
+						url: 'sousuo.html',
+						id: 'sousuo.html',
+						styles: {
+							top: "0px",
+							bottom: "0px",
+						},
+						extras: {},
+						show: {
+							duration: 300,
+							aniShow: "slide-in-right"
+						}
+					})
+				})
+			})
+		</script>
+
+		<style type="text/css">
+			.mui-active {
+				color: #66cdaa !important;
+			}
+
+			.mui-checkbox label {
+				color: lightgray;
+				margin-left: 6px;
+				font-size: 16px;
+			}
+
+			.settingdiv label {
+				color: lightgray;
+				margin-left: 22px;
+				font-size: 16px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<!-- 主界面移动、菜单不动 -->
+		<div class="mui-off-canvas-wrap mui-draggable">
+			<!-- 菜单容器 -->
+			<aside class="mui-off-canvas-left" id="offCanvasSide">
+				<div class="mui-scroll-wrapper">
+					<div class="mui-scroll">
+						<!-- 菜单具体展示内容 -->
+						<h4 style="text-align: center; color: white; margin: 30px;">设置</h4>
+						<div id="setting1">
+							<p style="margin-left: 15px; margin-top: 30px; color: darkgray; font-size: 13px;">网络</p>
+							<div class="mui-input-row mui-checkbox ">
+								<label>使用流量播放</label>
+								<input name="Checkbox" type="checkbox" checked>
+							</div>
+							<div class="mui-input-row mui-checkbox ">
+								<label>使用流量下载</label>
+								<input name="Checkbox" type="checkbox" checked>
+							</div>
+							<div class="mui-input-row mui-checkbox ">
+								<label>WiFi下自动播放视频</label>
+								<input name="Checkbox" type="checkbox">
+							</div>
+							<div class="mui-input-row mui-checkbox ">
+								<label>WiFi下连续播放视频</label>
+								<input name="Checkbox" type="checkbox">
+							</div>
+						</div>
+						<div id="setting2">
+							<p style="margin-left: 15px; margin-top: 25px; color: darkgray; font-size: 13px;">播放和下载</p>
+							<div class="settingdiv">
+								<label>在线播放音质</label>
+								<select name="sound" style="width: 60px; margin-left: 83px;">
+									<option value="1">无损</option>
+									<option value="2">高</option>
+									<option value="3">中</option>
+									<option value="4">低</option>
+								</select>
+							</div>
+							<div class="settingdiv">
+								<label>下载音质</label>
+								<select name="sound" style="width: 60px; margin-left: 115px;">
+									<option value="1">无损</option>
+									<option value="2">高</option>
+									<option value="3">中</option>
+									<option value="4">低</option>
+								</select>
+							</div>
+							<div class="settingdiv">
+								<label>音效设置</label>
+								<select name="sound" style="width: 86px; margin-left: 90px;">
+									<option value="1">HiFi现场</option>
+									<option value="2">3D环绕</option>
+									<option value="3">高解原声</option>
+									<option value="4">低音混响</option>
+								</select>
+							</div>
+						</div>
+						<div id="setting3">
+							<p style="margin-left: 15px; margin-top: 20px; color: darkgray; font-size: 13px;">账号和隐私</p>
+							<div class="mui-input-row mui-checkbox ">
+								<label>显示歌词翻译</label>
+								<input name="Checkbox" type="checkbox" checked>
+							</div>
+							<div class="settingdiv" style="margin-top: 10px;">
+								<label>切换语言</label>
+								<select name="sound" style="width: 86px; margin-left: 90px;">
+									<option value="1">简体中文</option>
+									<option value="2">繁體中文</option>
+									<option value="3">English</option>
+								</select>
+							</div>
+							<button type="button" class="mui-btn mui-btn-blue mui-btn-block" style="margin-top: 30px;" onclick="location.href='index.html';">切换账号</button>
+						</div>
+					</div>
+				</div>
+			</aside>
+			<!-- 主页面容器 -->
+			<div class="mui-inner-wrap">
+				<!-- 主页面标题 -->
+				<header class="mui-bar mui-bar-nav">
+					<a class="mui-icon mui-action-menu mui-icon-bars mui-pull-left" href="#offCanvasSide"></a>
+					<h1 class="mui-title">动听音乐</h1>
+					<a id="ss" class="mui-icon mui-icon-search mui-pull-right" href="#"></a>
+				</header>
+
+				<nav class="mui-bar mui-bar-tab">
+					<a id="mine" class="mui-tab-item">
+						<span class="mui-tab-label">我的</span>
+					</a>
+					<a id="home" class="mui-tab-item mui-active">
+						<span class="mui-tab-label">主页</span>
+					</a>
+					<a class="mui-tab-item">
+						<span class="mui-tab-label">动态</span>
+					</a>
+					<a class="mui-tab-item">
+						<span class="mui-tab-label">视频</span>
+					</a>
+				</nav>
+			</div>
+		</div>
+	</body>
+
+	<script type="text/javascript">
+		var gallery = mui('.mui-slider');
+		gallery.slider({
+			interval: 2000 //自动轮播周期，若为0则不自动播放，默认为0；
+		});
+
+		mui('.mui-scroll-wrapper').scroll({
+			deceleration: 10 //flick 减速系数，系数越大，滚动速度越慢，滚动距离越小，默认值0.0006
+		});
+	</script>
+
+</html>

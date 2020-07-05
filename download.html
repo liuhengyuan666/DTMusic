@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <script src="js/mui.min.js"></script>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+	<link href="css/icons-extra.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" charset="utf-8">
+      	mui.init();
+		mui.plusReady(function () {
+		    document.getElementById("play").addEventListener("tap",function(){
+				plus.webview.open("player.html","player.html",{top:"0px",bottom:"0px"})
+			});
+		});
+    </script>
+	<style type="text/css">
+		img{
+			border-radius: 3px;
+		}
+		#dingbu .mui-active{
+			color: #66cdaa;
+		}
+		.bf{
+			margin-top: 12px;
+		}
+		.mui-ellipsis{
+			font-size: 12px;
+		}
+		#item img{
+			margin-top: 2px;
+			height: 35px;
+		}
+		#item3 img{
+			margin-top: 2px;
+			height: 35px;
+		}
+		.mui-content{
+			background-color: white;
+		}
+		body{
+			background-color: white;
+		}
+	</style>
+</head>
+<body>
+	<header class="mui-bar mui-bar-nav">
+		<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		<h1 class="mui-title">下载管理</h1>
+	</header>
+	<div class="mui-content">
+	<div class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+		<div id="dingbu" class="mui-scroll" style="font-size: 18px;">
+			<a class="mui-control-item mui-active" href="#item">
+			  &nbsp;单曲&nbsp;
+			</a>
+			<a class="mui-control-item" href="#item1">
+			  &nbsp;电台节目&nbsp;
+			</a>
+			<a class="mui-control-item" href="#item2">
+			   &nbsp;视频&nbsp;
+			</a>
+			<a class="mui-control-item" href="#item3">
+			   &nbsp;下载中&nbsp;
+			</a>
+		</div>
+	</div>
+	<hr style="height:1px;border:none;border-top:1px solid #555555;" />
+	<div class="bf"><img src="img/bofang2.png" style="width: 35px; margin-left: 10px; margin-bottom: -10px;"><span>播放全部</span><span style="font-size: 12px;color: gray;">(顺序播放)</span></div><br>
+	<div id="item" class="mui-control-content">
+	<ul class="mui-table-view">
+		<li class="mui-table-view-cell mui-media">
+			<a href="javascript:;">
+				<img class="mui-media-object mui-pull-right" src="img/bofangg.png">
+				<div class="mui-media-body">
+					圣所
+					<p class="mui-ellipsis"><span style="color: red;">VIP下载&nbsp独家</span>&nbsp;9.3M&nbsp;林俊杰-伟大的渺小</p>
+				</div>
+			</a>
+		</li>
+		<li class="mui-table-view-cell mui-media">
+			<a href="javascript:;">
+				<img class="mui-media-object mui-pull-right" src="img/bofangg.png">
+				<div class="mui-media-body">
+					伟大的渺小
+					<p class="mui-ellipsis"><span style="color: red;">VIP下载&nbsp独家</span>&nbsp;11.6M&nbsp;林俊杰-伟大的渺小</p>
+				</div>
+			</a>
+		</li>
+		<li id="play" class="mui-table-view-cell mui-media">
+			<a href="javascript:;">
+				<img class="mui-media-object mui-pull-right" src="img/bofangg.png">
+				<div class="mui-media-body">
+					黑夜问白天
+					<p class="mui-ellipsis"><span style="color: red;">VIP下载&nbsp独家</span>&nbsp;10.3M&nbsp;林俊杰-伟大的渺小</p>
+				</div>
+			</a>
+		</li>
+	</ul>
+	</div>
+	<div id="item1" class="mui-control-content mui-active">
+	<p style="text-align: center;">暂无下载</p>
+	</div>
+	<div id="item2" class="mui-control-content mui-active">	
+	<ul class="mui-table-view">
+		<li class="mui-table-view-cell mui-media">
+			<a href="javascript:;">
+				<img class="mui-media-object mui-pull-left" src="img/weida.png">
+				<div class="mui-media-body">
+					伟大的渺小
+					<p class="mui-ellipsis"><span style="color: red;">独家</span>&nbsp;22.6M&nbsp;林俊杰-伟大的渺小</p>
+				</div>
+			</a>
+		</li>
+		<li class="mui-table-view-cell mui-media">
+			<a href="javascript:;">
+				<img class="mui-media-object mui-pull-left" src="img/dibulogo.png">
+				<div class="mui-media-body">
+					黑夜问白天
+					<p class="mui-ellipsis"><span style="color: red;">独家</span>&nbsp;18.9M&nbsp;林俊杰-伟大的渺小</p>
+				</div>
+			</a>
+		</li>
+	</ul>
+	</div>
+	<div id="item3" class="mui-control-content mui-active">
+		<ul class="mui-table-view">
+			<li class="mui-table-view-cell mui-media">
+				<a href="javascript:;">
+					<img class="mui-media-object mui-pull-right" src="img/bofangg.png">
+					<div class="mui-media-body">
+						倾城(Live)
+						<p class="mui-ellipsis"><span style="color: red;">VIP下载&nbsp独家</span>&nbsp;9.5M&nbsp;陈奕迅-Concert&nbsp;YY</p>
+					</div>
+				</a>
+			</li>
+		</ul>
+	</div>
+	<footer>
+	<nav class="mui-bar mui-bar-tab"">
+		<ul class="mui-table-view">
+				<li class="mui-table-view-cell">
+					<a>
+						<img class="mui-media-object mui-pull-right" src="img/bofang2.png" style="width: 40px; height: 40px;">
+						<img class="mui-media-object mui-pull-left" src="img/dibulogo.png">
+						黑夜问白天<p>林俊杰</p>
+					</a>
+				</li>
+			</ul>
+	</nav>
+	</footer>
+</div>
+</body>
+</html>
